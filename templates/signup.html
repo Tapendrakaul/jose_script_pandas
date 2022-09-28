@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+ <div class="container">
+    <div class="row" style="margin-top:1%;">
+       <div class="col-md-4 col-sm-12"></div>
+       <div class="col-md-4 col-sm-12"  style="background-color: #f4f2f3;margin-top:1%; "> 
+         <h1 class="text-center loglabel ">Sign Up </h1>
+         <p class="text-center">Please fill in this form to create an account.</p>
+         <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <p>
+               {{ field.label_tag }}<br>
+               {{ field }}
+               {% if field.help_text %}
+               {% endif %}
+               {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+            {% endfor %}
+            </p>
+            {% endfor %}
+            <div style="margin-bottom: 3%;margin-top: 10%;"><button type="submit" id="pay-btn" class="signupbtn">Sign Up</button></div>
+            <div style="margin-bottom: 50px;"><button type="reset" value="Reset" class="cancelbtn">Cancel</button></div>
+         </form></div>
+       <div class="col-md-4 col-sm-12"></div>
+       
+    </div>
+      </div>
+      </div>
+   </div>
+{% endblock %}

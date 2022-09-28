@@ -1,0 +1,11 @@
+@media (max-width: 480px){
+	.ulfooterline, .label2, .label1{
+		margin: 0;
+	}
+	.label2{
+		width: 100%;
+	    text-align: left;
+	}
+	
+		
+}

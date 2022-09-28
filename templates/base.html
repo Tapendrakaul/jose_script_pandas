@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   <head>
+      {% block static %}
+      <title>{% block title %}Jose Galeras{% endblock %}</title>
+      <meta charset="utf-8">
+      <meta http-equiv="Expires" content="-1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+      <link rel="stylesheet" type="text/css" href="/static/css/responsive-style.css">
+      <script type="text/javascript" src="static/js/bootstrap.js"></script>
+      <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+      {% endblock static %}
+   </head>
+   <body>
+      {% block header %}
+      <!-- Start header -->
+      {% include "header.html" %}
+      <!--  &lt;!&ndash; End header &ndash;&gt;-->
+      {% endblock header %}
+      
+      {% block content %}
+      
+      {% endblock content %}
+
+
+      <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+  
+  <script>
+   // messages timeout for 2sec 
+   var message_ele = document.getElementById("message_container");
+   setTimeout(function(){ 
+      message_ele.style.display = "none"; 
+   },3000);
+   // Timeout is 2 sec, you can change it
+  </script>
+
+</body>
+</html>

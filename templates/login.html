@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-sm-12"></div>
+		 <div class="col-md-4 col-sm-12">
+		{% if messages %}
+		   {% for msg in messages %}
+			 <div id="message_container" {% if msg.tags == 'error' %}style="background-color: #ffe6e6;border: 1px solid red;color: #bb0303;"{% endif %} class="alert alert-success alert-dismissable">
+			   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			   {{msg.message}}
+			 </div>
+		   {% endfor %}
+		 {% endif %}
+		 </div>
+		 <div class="col-md-4 col-sm-12"></div>
+	  </div>
+	<div class="row" style=" margin-top:1%;"></div>
+	<div class="col-md-4 col-sm-12"></div>
+	<div class="col-md-4 col-sm-12 "  style="background-color: #f4f2f3;margin-top:1%; ">
+			
+		<form method="post" action="">
+			<div ><h4 class="loglabel text-center">Login Here</h4></div>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<div ><button type="submit" class="btn login-button" style="width:100%;    margin-bottom: 5%;">Login</button></div>
+			<div class="text-center" style="margin-top:5%; margin-bottom:5%;">
+				<a href="{% url 'signup' %}" class="signupbtn">Sign Up</a>
+			</div>
+			
+		</form>
+			
+		</div>
+		<div class="col-md-4 col-sm-12"></div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,1 @@
+web: gunicorn Galeras_Trading.wsgi

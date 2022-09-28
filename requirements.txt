@@ -1,0 +1,15 @@
+asgiref==3.4.1
+Django==3.2.13
+et-xmlfile==1.1.0
+greenlet==1.1.2
+gunicorn==20.1.0
+importlib-metadata==4.8.3
+numpy
+openpyxl==3.0.10
+pandas
+psycopg2-binary==2.8.6
+python-dateutil==2.8.2
+SQLAlchemy==1.4.37
+sqlparse==0.4.2
+typing-extensions==4.1.1
+zipp==3.6.0
